@@ -1,0 +1,60 @@
+article {
+    background-color: rgb(0, 0, 0, 0.5);
+    width: 90%;
+    border-radius: 25px;
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.home-article {
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+.welcome {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 5rem;
+    justify-content: space-evenly;
+    margin-left: 0.5rem;
+}
+
+.welcome img {
+    height: 2rem;
+}
+
+p, ul {
+    font-size: 1.1rem;
+}
+
+ul {
+    margin: 1.5rem;
+    width: 35rem;
+    width: fit-content;
+}
+
+li {
+    margin-top: 0.5rem;
+}
+
+span {
+    font-size: 0.7rem;
+}
+
+.enjoy {
+    margin-top: 1rem;
+}
+
+@media screen and (min-width: 465px) {
+    .welcome img {
+        height: 4rem;
+    }
+
+    .home-article {
+        min-height: 70vh;
+    }
+}

@@ -1,0 +1,47 @@
+nav {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: rgb(255, 255, 255, 0.1);
+  width: 100vw;
+  padding: 0.5rem;
+}
+
+select,
+input,
+button {
+  background-color: rgb(255, 255, 255, 0.7);
+  border-radius: 10px;
+  border: 3px solid #7d8fc4;
+  cursor: pointer;
+  height: 1.4rem;
+}
+
+input,
+select {
+  text-align: center;
+  width: 10rem;
+}
+
+button {
+  width: 7rem;
+}
+
+button:hover,
+select:hover,
+input:hover {
+  background-color: rgb(245, 222, 179, 0.6);
+}
+
+button:active {
+  font-style: italic;
+}
+
+@media screen and (min-width: 465px) {
+    nav {
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+}

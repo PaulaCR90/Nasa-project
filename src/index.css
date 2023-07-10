@@ -1,0 +1,20 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: "Titillium Web", "Helvetica Neue", "Helvetica", Arial, sans-serif;
+}
+
+body {
+    color: wheat;
+    background-image: url('./assets/background.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#root {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}

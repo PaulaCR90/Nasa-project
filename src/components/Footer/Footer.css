@@ -1,0 +1,41 @@
+footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:center;
+    margin-top: 20px;
+    background-color: rgb(255, 255, 255, 0.1);
+    width: 100vw;
+    height: 50px;
+    bottom: 0;
+}
+
+img {
+    height: 25px;
+}
+
+a {
+    color: rgb(85, 173, 67);
+}
+
+.img-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 0.2rem;
+}
+
+@media screen and (min-width: 465px) {
+    footer {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    
+    .img-container {
+        width: 50vw;
+    }
+
+    h6 {
+        padding-left: 1rem;
+    }
+}
