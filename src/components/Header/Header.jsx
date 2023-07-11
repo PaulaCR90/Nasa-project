@@ -11,7 +11,7 @@ const Header = ({
     <header>
       <img
         className="logoHeader"
-        src="./assets/NasaLogo.png"
+        src="../public/assets/NasaLogo.png"
         alt="NasaLogo"
       />
       <Browser

@@ -6,9 +6,9 @@ const Home = () => {
     <>
       <article className="home-article">
         <div className="welcome">
-          <img src="./assets/walleHeader.png" alt="Asteroid image" />
+          <img src="../public/assets/walleHeader.png" alt="Asteroid image" />
           <h1>Welcome!</h1>
-          <img src="./assets/evaHeader.png" alt="Wall-e image" />
+          <img src="../public/assets/evaHeader.png" alt="Wall-e image" />
         </div>
         <h3>Let's introduce you to this amazing site.</h3>
         <p>
