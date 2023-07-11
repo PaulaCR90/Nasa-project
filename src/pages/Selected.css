@@ -1,51 +1,52 @@
 .selected-h4 {
-    margin-top: 1rem;
+  margin-top: 1rem;
 }
 
 .ContentBox {
-    width: 80%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    padding: 2rem;
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 2rem;
 }
 
 .image {
-    width: 90%;
-    height: 70%;
-    margin: 1rem;
-    border: 1px solid wheat;
-    border-radius: 10px;
+  width: 90%;
+  height: 70%;
+  margin: 1rem;
+  border: 1px solid var(--text-color);
+  border-radius: 10px;
 }
 
 .title-container {
-    font-size: 1.1rem;
-    font-style: italic;
-    margin-bottom: 1rem;
+  font-size: 1.1rem;
+  font-style: italic;
+  margin-bottom: 1rem;
 }
 
 .copyright {
-    margin-top: 1rem;
-    font-size: 1rem;
-    font-style: italic;
-    margin-bottom: 1rem;
+  margin-top: 1rem;
+  font-size: 1rem;
+  font-style: italic;
+  margin-bottom: 1rem;
 }
 
-@media screen and (min-width: 921px ) {
-    .ContentBox {
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: start;
-        min-height: 70vh;
-        height: max-content;
-    }
+@media screen and (min-width: 921px) {
+  .ContentBox {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: start;
+    min-height: 70vh;
+    height: max-content;
+  }
 
-    .imageDiv, .explanationDiv {
-        width: 45%;
-    }
+  .imageDiv,
+  .explanationDiv {
+    width: 45%;
+  }
 
-    .explanationDiv {
-        margin-top: 1rem;
-    }
+  .explanationDiv {
+    margin-top: 1rem;
+  }
 }

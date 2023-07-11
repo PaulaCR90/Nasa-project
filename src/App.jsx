@@ -13,47 +13,24 @@ function App() {
   const [date, setDate] = useState(Today);
   const [ApiBox, setApiBox] = useState({});
   const [MarsBox, setMarsBox] = useState([]);
-  const [selectValue, setSelectValue] = useState("0");
 
   return (
     <>
       <Header
-        MarsBox={MarsBox}
         setMarsBox={setMarsBox}
-        ApiBox={ApiBox}
         setApiBox={setApiBox}
         date={date}
         setDate={setDate}
-        selectValue={selectValue}
-        setSelectValue={setSelectValue}
       />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route
           path="/mars"
-          element={
-            <RoverSelected
-              MarsBox={MarsBox}
-              setMarsBox={setMarsBox}
-              date={date}
-              setDate={setDate}
-              selectValue={selectValue}
-              setSelectValue={setSelectValue}
-            />
-          }
+          element={<RoverSelected MarsBox={MarsBox} date={date} />}
         />
         <Route
           path="/apod"
-          element={
-            <Selected
-              ApiBox={ApiBox}
-              setApiBox={setApiBox}
-              date={date}
-              setDate={setDate}
-              selectValue={selectValue}
-              setSelectValue={setSelectValue}
-            />
-          }
+          element={<Selected ApiBox={ApiBox} date={date} />}
         />
         <Route path="/404" element={<NotFound />} />
       </Routes>

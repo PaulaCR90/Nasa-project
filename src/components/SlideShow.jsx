@@ -1,20 +1,17 @@
-import React from 'react'
-import { Fade } from 'react-slideshow-image'
+import React from "react";
+import "./SlideShow.css";
 
 const SlideShow = ({ MarsBox }) => {
   return (
-    <div className='slide-container'>
-        <Fade>
-            {MarsBox.map((photo) => {
-                <div className='each-slide' key={photo.id}>
-                    <div style={{'backgroundImage': `url(${photo.img_src})` }}>
-                <span>Curiosity camera: {photo.camera.name}</span>
-              </div>
-                </div>
-            })}
-        </Fade>
+    <div className="slide-container">
+      {MarsBox.photos.map((photo) => (
+        <div className="each-slide" key={photo.id}>
+          <img className="rover-img" src={photo.img_src} alt={photo.id} />
+          <span className="rover-span">{photo.camera.full_name}</span>
+        </div>
+      ))}
     </div>
-  )
-}
+  );
+};
 
 export default SlideShow;

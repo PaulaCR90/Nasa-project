@@ -1,21 +1,30 @@
 import React from "react";
 import "./RoverSelected.css";
 import SlideShow from "../components/SlideShow";
-import { Navigate } from "react-router-dom";
+import NotFound from "./404";
+import { NavLink } from "react-router-dom";
 
 const RoverSelected = ({ date, MarsBox }) => {
-  if (!MarsBox.length) {
-    <Navigate to="/404" />;
-  }
   return (
     <>
-      <article className="rover-section">
-        <h4>
-          This photos are sent from the Rover 'Curiosity' and selected by NASA
-          for {date}
-        </h4>
-        <SlideShow MarsBox={MarsBox} />
-      </article>
+      {MarsBox.length === 0 ? (
+        <NotFound />
+      ) : MarsBox.photos.length === 0 ? (
+        <NotFound />
+      ) : (
+        <article className="rover-article">
+          <h4 className="rover-h4">
+            This are Mars photos from the Rover 'Curiosity' for {date}
+          </h4>
+          <SlideShow MarsBox={MarsBox} />
+          <div className="options">
+            <p className="option">Try with another date, change API or</p>
+            <NavLink to="/">
+              <button className="back-button">Take me back home! 🌍</button>
+            </NavLink>
+          </div>
+        </article>
+      )}
     </>
   );
 };

@@ -1,8 +1,7 @@
 import React from "react";
-import Today from '../../sources/Today';
+import Today from "../../sources/Today";
 
-const InputDate = ({date, setDate}) => {
-
+const InputDate = ({ date, setDate }) => {
   return (
     <>
       <input

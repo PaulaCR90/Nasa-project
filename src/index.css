@@ -1,20 +1,33 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    text-decoration: none;
-    font-family: "Titillium Web", "Helvetica Neue", "Helvetica", Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: "Titillium Web", "Helvetica Neue", "Helvetica", Arial, sans-serif;
+}
+
+:root {
+  --text-color: wheat;
+  --article-color: rgb(0, 0, 0, 0.5);
+  --gradient-scrollbar-color: rgb(0, 0, 0, 0.9);
+  --background-scrollbar-color: #f5f5f5;
+  --scrollbar-color: #d62929;
+  --background-headers: rgb(255, 255, 255, 0.1);
+  --background-button: rgb(255, 255, 255, 0.7);
+  --border-button: #7d8fc4;
+  --hover-button: rgb(245, 222, 179, 0.6);
+  --anchor-color: rgb(85, 173, 67);
 }
 
 body {
-    color: wheat;
-    background-image: url('./assets/background.png');
-    background-size: cover;
-    background-repeat: no-repeat;
+  color: wheat;
+  background-image: url("./assets/background.png");
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 #root {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }

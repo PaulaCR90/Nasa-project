@@ -1,27 +1,41 @@
 import React from "react";
-import { NavLink, useNavigate } from "react-router-dom";
-import GetAPODPhotos from '../GetAPODPhotos'
+import { useNavigate } from "react-router-dom";
 
-const Button = ({ selectValue, date, setApiBox }) => {
+const Button = ({ selectValue, date, setApiBox, setMarsBox }) => {
+  const ApodLink = `${
+    import.meta.env.VITE_APP_NASA_API_URL
+  }/planetary/apod?date=${date}&api_key=${
+    import.meta.env.VITE_APP_NASA_API_KEY
+  }`;
+  const MarsLink = `${
+    import.meta.env.VITE_APP_NASA_API_URL
+  }/mars-photos/api/v1/rovers/curiosity/photos?100&api_key=${
+    import.meta.env.VITE_APP_NASA_API_KEY
+  }&earth_date=${date}`;
 
   const navigate = useNavigate();
-  
+
   const handleSubmit = () => {
-    console.log(selectValue);
     if (selectValue === "mars") {
-      <GetMarsPhotos date={date} />;
-      navigate('/mars')
+      fetch(MarsLink)
+        .then((res) => res.json())
+        .then((res) => setMarsBox(res));
+      navigate("/mars");
+    } else if (selectValue === "apod") {
+      fetch(ApodLink)
+        .then((res) => res.json())
+        .then((res) => setApiBox(res));
+      navigate("/apod");
     } else {
-      <GetAPODPhotos date={date} setApiBox={setApiBox} />;
-      navigate('/apod')
+      navigate("/404");
     }
   };
 
   return (
     <>
-        <button type="submit" onClick={handleSubmit}>
-          Start! 🛸
-        </button>
+      <button type="submit" onClick={handleSubmit}>
+        Start! 🛸
+      </button>
     </>
   );
 };
