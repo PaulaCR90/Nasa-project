@@ -9,7 +9,7 @@ const NotFound = () => {
         <h3 className="sorry-h3">Sorry! Page not found.</h3>
         <img
           className="notFound-img"
-          src="../public/assets/404.png"
+          src="./assets/404.png"
           alt="404 image"
         />
         <NavLink to="/">
