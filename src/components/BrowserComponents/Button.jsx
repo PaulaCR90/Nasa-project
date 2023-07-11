@@ -2,16 +2,10 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 
 const Button = ({ selectValue, date, setApiBox, setMarsBox }) => {
-  const ApodLink = `${
-    import.meta.env.VITE_APP_NASA_API_URL
-  }/planetary/apod?date=${date}&api_key=${
-    import.meta.env.VITE_APP_NASA_API_KEY
-  }`;
-  const MarsLink = `${
-    import.meta.env.VITE_APP_NASA_API_URL
-  }/mars-photos/api/v1/rovers/curiosity/photos?100&api_key=${
-    import.meta.env.VITE_APP_NASA_API_KEY
-  }&earth_date=${date}`;
+  const NasaLink = "https://api.nasa.gov";
+  const ApiKey = "cjiy3r3KfYvHXY1IzAjabSytpsoiSai2EyW4dsMk";
+  const ApodLink = `${NasaLink}/planetary/apod?date=${date}&api_key=${ApiKey}`;
+  const MarsLink = `${NasaLink}/mars-photos/api/v1/rovers/curiosity/photos?100&api_key=${ApiKey}&earth_date=${date}`;
 
   const navigate = useNavigate();
 
